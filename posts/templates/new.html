@@ -1,0 +1,191 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container demo-3">
+	<div class="content">
+        <div id="large-header" class="large-header">
+            <canvas id="demo-canvas"></canvas>
+            <h1 class="main-title">SUDOKU</span></h1>
+        </div>
+
+        <div class="codrops-header">
+            <h1>Put your SUDOKU!</h1>
+            
+                <h3>2017112610 송수민</h3>
+
+            
+        </div>
+    </div>
+    <!-- Related demos -->
+    <section class="related">
+    
+    <table>
+        <form action = "{% url 'posts:create'%}" method = "POST">
+            {% csrf_token %}
+        <tr>
+            <td>
+                
+                <input type = "text" name = "row1[]" >
+            </td>
+            <td>
+               
+                <input type = "text" name = "row1[]" >
+            </td>
+            <td>
+                
+                <input type = "text" name = "row1[]" >
+            </td>
+            <td>
+               
+                <input type = "text" name = "row1[]" >
+            </td>
+            <td>
+                
+                <input type = "text" name = "row1[]" >
+            </td>
+            <td>
+               
+                <input type = "text" name = "row1[]" >
+            </td>
+            <td>
+              
+                <input type = "text" name = "row1[]" >
+            </td>
+            <td>
+               
+                <input type = "text" name = "row1[]" >
+            </td>
+            <td>
+                
+                <input type = "text" name = "row1[]" >
+            </td>  
+        </tr>
+        
+  <tr>
+  <td><input type = "text" name = "row2[]" ></td>
+  <td><input type = "text" name = "row2[]"  ></td>
+  <td><input type = "text" name = "row2[]"  ></td>
+  <td><input type = "text" name = "row2[]"  ></td>
+  <td><input type = "text" name = "row2[]"  ></td>
+  <td><input type = "text" name = "row2[]"  ></td>
+  <td><input type = "text" name = "row2[]"  ></td>
+  <td><input type = "text" name = "row2[]"  ></td>
+  <td><input type = "text" name = "row2[]"  ></td>  
+  </tr>
+  
+  <tr>
+  <td><input type = "text" name = "row3[]" ></td>
+  <td><input type = "text" name = "row3[]" ></td>
+  <td><input type = "text" name = "row3[]" ></td>
+  <td><input type = "text" name = "row3[]" ></td>
+  <td><input type = "text" name = "row3[]" ></td>
+  <td><input type = "text" name = "row3[]" ></td>
+  <td><input type = "text" name = "row3[]" ></td>
+  <td><input type = "text" name = "row3[]" ></td>
+  <td><input type = "text" name = "row3[]" ></td>  
+  </tr>
+  
+  <tr>
+  <tr>
+  <td><input type = "text" name = "row4[]" ></td>
+  <td><input type = "text" name = "row4[]" ></td>
+  <td><input type = "text" name = "row4[]" ></td>
+  <td><input type = "text" name = "row4[]" ></td>
+  <td><input type = "text" name = "row4[]" ></td>
+  <td><input type = "text" name = "row4[]" ></td>
+  <td><input type = "text" name = "row4[]" ></td>
+  <td><input type = "text" name = "row4[]" ></td>
+  <td><input type = "text" name = "row4[]" ></td>  
+  </tr>
+
+  <tr>
+  <td><input type = "text" name = "row5[]" ></td>
+  <td><input type = "text" name = "row5[]" ></td>
+  <td><input type = "text" name = "row5[]" ></td>
+  <td><input type = "text" name = "row5[]" ></td>
+  <td><input type = "text" name = "row5[]" ></td>
+  <td><input type = "text" name = "row5[]" ></td>
+  <td><input type = "text" name = "row5[]" ></td>
+  <td><input type = "text" name = "row5[]" ></td>
+  <td><input type = "text" name = "row5[]" ></td>  
+  </tr>
+  
+  <tr>
+  <td><input type = "text" name = "row6[]" ></td>
+  <td><input type = "text" name = "row6[]" ></td>
+  <td><input type = "text" name = "row6[]" ></td>
+  <td><input type = "text" name = "row6[]" ></td>
+  <td><input type = "text" name = "row6[]" ></td>
+  <td><input type = "text" name = "row6[]" ></td>
+  <td><input type = "text" name = "row6[]" ></td>
+  <td><input type = "text" name = "row6[]" ></td>
+  <td><input type = "text" name = "row6[]" ></td>  
+  </tr>
+  
+  <tr>
+  <td><input type = "text" name = "row7[]" ></td>
+  <td><input type = "text" name = "row7[]" ></td>
+  <td><input type = "text" name = "row7[]" ></td>
+  <td><input type = "text" name = "row7[]" ></td>
+  <td><input type = "text" name = "row7[]" ></td>
+  <td><input type = "text" name = "row7[]" ></td>
+  <td><input type = "text" name = "row7[]" ></td>
+  <td><input type = "text" name = "row7[]" ></td>
+  <td><input type = "text" name = "row7[]" ></td>  
+  </tr>
+  
+  <tr>
+  <td><input type = "text" name = "row8[]" ></td>
+  <td><input type = "text" name = "row8[]" ></td>
+  <td><input type = "text" name = "row8[]" ></td>
+  <td><input type = "text" name = "row8[]" ></td>
+  <td><input type = "text" name = "row8[]" ></td>
+  <td><input type = "text" name = "row8[]" ></td>
+  <td><input type = "text" name = "row8[]" ></td>
+  <td><input type = "text" name = "row8[]" ></td>
+  <td><input type = "text" name = "row8[]" ></td>  
+  </tr>
+  
+  <tr>
+  <td><input type = "text" name = "row9[]" ></td>
+  <td><input type = "text" name = "row9[]" ></td>
+  <td><input type = "text" name = "row9[]" ></td>
+  <td><input type = "text" name = "row9[]" ></td>
+  <td><input type = "text" name = "row9[]" ></td>
+  <td><input type = "text" name = "row9[]" ></td>
+  <td><input type = "text" name = "row9[]" ></td>
+  <td><input type = "text" name = "row9[]" ></td>
+  <td><input type = "text" name = "row9[]" ></td>  
+  </tr>
+  
+</table>
+<br><br>
+<input type="submit"value="Start?"/>
+</form>
+
+    </section>
+</div><!-- /container -->
+
+<script src = "{% static 'js/TweenLite.min.js'%}"></script>
+<script src="{% static 'js/EasePack.min.js' %}"></script>
+<script src="{% static 'js/rAF.js' %}"></script>
+<script src="{% static 'js/demo-3.js' %}"></script>
+
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+{% endblock %}

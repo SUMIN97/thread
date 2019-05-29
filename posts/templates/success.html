@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container demo-3">
+	<div class="content">
+        <div id="large-header" class="large-header">
+            <canvas id="demo-canvas"></canvas>
+            <h1 class="main-title">SUDOKU</span></h1>
+        </div>
+
+
+    </div>
+    <!-- Related demos -->
+    <section>
+        <form action = "{% url 'posts:new' %}">
+            <h1>Result : Sudoku puzzle is valid</h1>
+            <h1>Press button to restart!</h1>
+            <input type = "button" value = "Click">
+        </form>
+    </section>
+</div><!-- /container -->
+
+<script src = "{% static 'js/TweenLite.min.js'%}"></script>
+<script src="{% static 'js/EasePack.min.js' %}"></script>
+<script src="{% static 'js/rAF.js' %}"></script>
+<script src="{% static 'js/demo-3.js' %}"></script>
+
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+{% endblock %}
