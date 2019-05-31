@@ -100,3 +100,18 @@
 		font-size: 4em;
 	}
 }
+table{
+	table-layout: fixed;
+	width: 100%;
+}
+tr{
+width: 100%;	
+}
+td{
+	width: 100%;
+}
+input{
+	width: 100px;
+	margin: 0 20px;
+	text-align: center;
+}

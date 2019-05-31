@@ -197,17 +197,19 @@ void *column_worker(void *params)
 		status = 1;
 		for (k = 1; k < PUZZLE_SIZE + 1; k++)
 		{
-			if (map[k] == 0)
+			if (map[k] == 0){
+				status = 0;
+				break;
+			}
+		}
+		if (status == 0)
+			break;
+		else
+		{
+			// 다음 row 체크를 위한 초기화
+			for (i = 0; i < PUZZLE_SIZE + 1; i++)
 			{
-				if (status == 0)
-					break;
-				else
-				{
-					for (i = 0; i < PUZZLE_SIZE + 1; i++)
-					{
-						map[i] = 0;
-					}
-				}
+				map[i] = 0;
 			}
 		}
 	}
